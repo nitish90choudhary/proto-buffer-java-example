@@ -1,0 +1,7 @@
+syntax = "proto3";
+package main;
+message Coordinate{
+  double latitude = 1;
+  double longitude = 2;
+
+}

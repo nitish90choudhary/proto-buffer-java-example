@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package main;
+option java_multiple_files = true;
+option java_package = "com.github.nitishchoudhary";
+message Person{
+  int32 age = 1;
+  string first_name = 2;
+  repeated string middle_name = 3;
+  string last_name = 4;
+  bytes avatar = 5;
+  bool is_verified = 6;
+  float height = 7;
+  repeated string phone_number = 8; // phone_number is a list
+  enum EyeColor{
+    UNKNOWN_COLOR = 0;
+    BROWN = 1;
+    BLUE = 2;
+    GREEN = 3;
+  }
+  EyeColor eye_color = 9;
+  Date date_of_birth = 10;
+
+  message Address{
+    string address_line1 = 1;
+    string address_line2 = 2;
+    string zip_code = 3;
+    string city = 4;
+    string country = 5;
+  }
+  repeated Address addresses = 11;
+}
+
+
+//we can import data message
+message Date{
+
+  int32 year = 1;
+  int32 month = 2;
+  int32 day = 3;
+
+}

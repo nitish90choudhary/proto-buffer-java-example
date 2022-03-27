@@ -1,0 +1,6 @@
+syntax = "proto3";
+package address;
+message Street{
+  string street_name = 1;
+  //address.City city = 2;
+}
